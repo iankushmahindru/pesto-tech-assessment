@@ -51,8 +51,7 @@ avro_schema = StructType([
     StructField("bid_price", IntegerType(), True),
     StructField("sold_price", IntegerType(), True),
     StructField("status", StringType(), True),
-    StructField("update_ts", DateTime(), True),
-    StructField("bid_price", IntegerType(), True)
+    StructField("update_ts", DateTime(), True)
 ])
 
 # Read JSON data (ad impressions)
