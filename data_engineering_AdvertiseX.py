@@ -120,7 +120,7 @@ def sendEmailAlert(subject,message):
         server.login(smtp_username, smtp_password)
         server.sendmail(sender, receiver, msg.as_string())
         
-if filtered_df.filter(error_condition) > 5:
+if filtered_df.filter(error_condition).count() > 5:
     subject = "Data Quality Error"
     message = "Either number of impressions or number of clicks are negative"
     sendEmailAlert(subject=subject, message=message)
